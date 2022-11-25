@@ -1,0 +1,42 @@
+.container-social-proof {
+  width:100%;
+  padding:20vh 0 10vh 0;
+}
+
+.commentaite {
+height : 250px;
+margin-bottom:50px;
+}
+
+.arrow {
+  transform: scale(1.5);
+}
+
+.left {
+  margin-right : 7vw;
+}
+
+.right {
+  margin-left : 7vw;
+}
+
+.arrow:hover {
+  cursor:pointer;
+  transform: scale(3);
+}
+
+h1 {
+  color: #1e60aa;
+  font-weight: bolder;
+  margin-bottom: 12vh;
+}
+
+
+@media screen and (max-width: 500px) {
+  .container-social-proof {
+    padding:8vh 0 20vh 0;
+  }
+  h1 {
+    margin-bottom: 6vh;
+  }
+}

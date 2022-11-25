@@ -1,0 +1,79 @@
+
+<footer class="text-center text-lg-start bg-dark text-muted" id="infos">
+
+  <section
+    class="d-flex p-2 border-bottom flex-row footer-info"
+  >
+  <img class="logo footer-info" src="../../assets/fb.png" (click)="openLink('https://www.facebook.com/profile.php?id=100086621382192')">
+  <img class="logo footer-info" src="../../assets/pg.png" (click)="openLink('https://www.pagesjaunes.fr/pros/09596104')">
+  <img class="logo footer-info" src="../../assets/ig.png" (click)="openLink('https://www.instagram.com/philippe.dubuisson_/')">
+
+
+</section>
+
+  <section class="footer-content">
+    <div class="container text-center text-md-start mt-5">
+      <div class="mt-3" [ngClass]="{ 'row': !isPortable, 'col': isPortable }">
+        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4 footer-info">
+
+          <h6 class="text-uppercase fw-bold mb-4">
+            Site
+          </h6>
+          <p>
+            <a class="text-reset" onClick="document.getElementById('services').scrollIntoView();">Services</a>
+          </p>
+          <p>
+            <a class="text-reset" onClick="document.getElementById('avis').scrollIntoView();">Avis clients</a>
+          </p>
+          <p>
+            <a class="text-reset" onClick="document.getElementById('about').scrollIntoView();">A propos</a>
+          </p>
+          <p>
+            <a class="text-reset" onClick="document.getElementById('contact').scrollIntoView();">Contact</a>
+          </p>
+        </div>
+
+        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4 footer-info ">
+            <h6 class="text-uppercase fw-bold mb-4">
+            <i class="fas fa-gem me-3"></i>Entreprise Dubuisson
+          </h6>
+          <p>
+            Située à CUBJAC, l'entreprise Dubuisson est spécialisée en chauffage, plomberie, vente et installation de salles de bains.
+          </p>
+          <p class="horaires"><span class="bold">Lun-Ven :</span> 8h/19h</p>
+          <p class="horaires"><span class="bold">Sam-Dim :</span> Fermé</p>
+
+        <div *ngIf="!isPortable" class="animation-drop">
+          <div class="drop"></div>
+          <div class="wave"></div>
+        </div>
+      </div>
+
+
+      <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4 footer-info flex-col">
+        <p>Votre avis compte :</p>
+        <img class="qr-code" src="../../assets/QR.png" (click)="openLink('https://www.instagram.com/philippe.dubuisson_/')">
+      </div>
+
+      <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4 footer-info ">
+
+          <h6 class="text-uppercase fw-bold mb-4">
+            Contact
+          </h6>
+          <p><i class="fas fa-home me-3"></i>Cubjac, France, 24640</p>
+          <p>
+            <i class="fas fa-envelope me-3"></i>
+            dubuisson.ph@orange.fr
+          </p>
+          <p><i class="fas fa-phone me-3"></i>+33 6 09 27 58 46</p>
+          <p><i class="fas fa-print me-3"></i>+33 5 53 05 56 35</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="text-center p-2" style="background-color: rgba(0, 0, 0, 0.05);">
+    © 2022 Copyright:
+    <p class="text-reset fw-bold">Entreprise Dubuisson</p>
+  </div>
+</footer>

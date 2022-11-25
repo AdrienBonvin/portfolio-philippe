@@ -1,0 +1,39 @@
+
+<nav class="navbar navbar-expand-lg navbar-dark static-top" [ngClass]="{ 'bg-light': !topOfScreen, 'navbar-light': !topOfScreen }">
+  <div class="container">
+    <a class="navbar-brand" href="">
+      <img  class="logo" [src]="pathLogo" alt="..." height="42">
+    </a>
+    <span class="flex-row phone-container">
+      <mat-icon [ngClass]="{ 'phone-white' : topOfScreen, 'phone-blue' : !topOfScreen }" class="phone-icon">phone</mat-icon>
+      <a [ngClass]="{ 'phone-white' : topOfScreen, 'phone-blue' : !topOfScreen }" class="phone-number">+33 6 09 27 58 46</a>
+    </span>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+    [ngClass]="{ 'menu-hamburger-sombre': !topOfScreen, 'menu-hamburger-light': topOfScreen}">
+      <span class="navbar-toggler-icon" ></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link" onClick="document.getElementById('services').scrollIntoView();" [ngStyle]="{'color': fontColor}">Services</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" onClick="document.getElementById('avis').scrollIntoView();" [ngStyle]="{'color': fontColor}">Avis clients</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" onClick="document.getElementById('about').scrollIntoView();" [ngStyle]="{'color': fontColor}">
+            Qui sommes-nous
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" onClick="document.getElementById('infos').scrollIntoView();" [ngStyle]="{'color': fontColor}">
+            Infos
+          </a>
+        </li>
+      </ul>
+      <button type="button" class="btn btn-outline-info btn-reservation" [ngClass]="{ 'btn-transparent' : topOfScreen, 'btn-bleu' : !topOfScreen }" onClick="document.getElementById('contact').scrollIntoView();" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show">Contactez-nous</button>
+    </div>
+  </div>
+</nav>
+

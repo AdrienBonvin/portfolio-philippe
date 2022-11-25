@@ -1,0 +1,10 @@
+<div class="container-social-proof flex-col">
+  <h1>Qu'en disent nos clients ?</h1>
+  <div class="flex-row commentaite">
+    <mat-icon class="arrow left" (click)="changeComment('previous')">keyboard_arrow_left</mat-icon>
+    <app-social-proof-comment [picture]="avis.photo" [name]="avis.name" [comment]="avis.comment" [info]="avis.source">
+    </app-social-proof-comment>
+    <mat-icon class="arrow right" (click)="changeComment('next')">keyboard_arrow_right</mat-icon>
+  </div>
+</div>
+

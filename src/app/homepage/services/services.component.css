@@ -1,0 +1,98 @@
+.container-texte-services {
+  width:100%;
+}
+
+.title {
+  font-weight: bolder;
+  color: #1e60aa;
+  margin: 12vh 0 9vh 0;
+}
+
+.sub-title {
+  font-weight: bolder;
+  font-size:20px;
+  height:100px;
+}
+
+.chauffage-title {
+  padding-bottom:80px;
+  color : #aa541e;
+}
+
+.plomberie-title {
+  padding-bottom:80px;
+  color : #1e60aa;
+}
+
+.separation {
+  z-index:5;
+  transform: rotate(90deg);
+}
+
+.part-service {
+text-align: center;
+padding:0 3vw;
+width:46vw;
+}
+
+.services-plomberie {
+border-left:solid;
+border-width: thin;
+border-color: rgba(101, 101, 101, 0.181);
+}
+
+.qualifications {
+  justify-content: space-around;
+  margin-top:6%;
+}
+
+.qualification {
+  width: 15vw;
+  justify-content: start;
+}
+
+.qual-text {
+  height:100px;
+  text-align: center;
+}
+
+img {
+  height:200px;
+  width:200px;
+  object-fit:contain;
+}
+
+app-icon-text-element {
+  margin:40px 20px;
+  width: 25vw;
+  height: 150px;
+}
+
+
+@media screen and (max-width: 500px) {
+  .services {
+    flex-direction: column;
+  }
+  .chauffage-title {
+    padding-bottom:20px;
+  }
+  .plomberie-title {
+    padding-bottom:20px;
+  }
+  img {
+    height:100px;
+    width:100px;
+    object-fit:contain;
+    margin-bottom:80px;
+  }
+  .qualification {
+    width: 100%;
+    height: 150px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .sous-section {
+    width:80%;
+  }
+}

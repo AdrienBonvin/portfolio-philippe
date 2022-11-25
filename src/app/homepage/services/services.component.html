@@ -1,0 +1,85 @@
+<div class="container-texte-services">
+  <div id="Services" class="flex-col">
+    <h1 class="flex-row title">SERVICES</h1>
+    <div class="flex-row">
+      <div class="services-chauffage part-service">
+        <h3 class="chauffage-title">Chauffage</h3>
+        <div [ngClass]="{ 'flex-row': !isPortable, 'flex-col': isPortable }">
+          <app-icon-text-element [icon]="pompeChaleur" [text]="'Vente, installation et remplacement de pompe à chaleur'"></app-icon-text-element>
+          <app-icon-text-element [icon]="chaudiere" [text]="'Vente, installation et remplacement de chaudiere Gaz et Fioul'"></app-icon-text-element>
+          <app-icon-text-element [icon]="bruleur" [text]="'Vente, installation et remplacement de bruleur Gaz et Fioul'"></app-icon-text-element>
+        </div>
+        <div [ngClass]="{ 'flex-row': !isPortable, 'flex-col': isPortable }">
+          <app-icon-text-element [icon]="circuitChauffage" [text]="'Désembouage circuit de chauffage'"></app-icon-text-element>
+          <app-icon-text-element [icon]="contrat" [text]="'Contrat entretien'"></app-icon-text-element>
+        </div>
+      </div>
+
+      <div class="services-plomberie part-service">
+        <h3 class="plomberie-title">Plomberie</h3>
+        <div [ngClass]="{ 'flex-row': !isPortable, 'flex-col': isPortable }">
+          <app-icon-text-element [icon]="toilet" [text]="'Installation plomberie et sanitaire'"></app-icon-text-element>
+          <app-icon-text-element [icon]="depanPlomb" [text]="'Dépannages plomberie'"></app-icon-text-element>
+          <app-icon-text-element [icon]="chauffeEau" [text]="'Vente, installation et remplacement de chauffe eau'"></app-icon-text-element>
+        </div>
+        <div [ngClass]="{ 'flex-row': !isPortable, 'flex-col': isPortable }">
+          <app-icon-text-element [icon]="bathroom" [text]="'Création et vente de salles de bain'"></app-icon-text-element>
+          <app-icon-text-element [icon]="depannage" [text]="'Dépannage et détartrage chauffe eau'"></app-icon-text-element>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="certifications" class="section">
+    <h1 class="flex-row title">QUALIFICATIONS</h1>
+
+    <div *ngIf="isPortable;else laptop" class="flex-col qualifications">
+        <div class="flex-row sous-section">
+          <div class="qualification">
+            <img src="../../../assets/qualibat.png">
+          </div>
+          <div class="qualification">
+            <img src="../../../assets/RGE-qualibat.png">
+          </div>
+        </div>
+        <div class="flex-row sous-section">
+          <div class="qualification">
+            <img src="../../../assets/pro-gaz.png">
+          </div>
+          <div class="qualification">
+            <img src="../../../assets/qualigaz.png">
+          </div>
+      </div>
+    </div>
+
+    <ng-template #laptop>
+      <div class="flex-row qualifications">
+        <div class="flex-col qualification">
+          <img src="../../../assets/qualibat.png">
+          <div class="sub-title flex-row">Qualibat</div>
+          <div class="qual-text">Reconnaissance des compétences de l'entreprise, de sa capacité à réaliser des travaux dans une activité donnée.
+          </div>
+        </div>
+        <div class="flex-col qualification">
+          <img src="../../../assets/RGE-qualibat.png">
+          <div class="sub-title flex-row">RGE</div>
+          <div class="qual-text">Entreprise qualifiée qui a fait la preuve de son efficacité dans le domaine de l'amélioration énergétique.
+          </div>
+        </div>
+        <div class="flex-col qualification">
+          <img src="../../../assets/pro-gaz.png">
+          <div class="sub-title flex-row">PG</div>
+          <div class="qual-text">Professionnel du Gaz Spécialistes installation domestique Gaz.
+          </div>
+        </div>
+        <div class="flex-col qualification">
+          <img src="../../../assets/qualigaz.png">
+          <div class="sub-title flex-row">Qualigaz</div>
+          <div class="qual-text">Garantie de la conformité avec la réglementation sur les travaux d'installations intérieures de gaz naturel.
+          </div>
+        </div>
+      </div>
+    </ng-template>
+  </div>
+</div>
+

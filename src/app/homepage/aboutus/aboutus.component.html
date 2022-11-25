@@ -1,0 +1,26 @@
+<div class="line flex-col"><hr></div>
+<div class="container-about-us">
+  <div class="about-us" [ngClass]="{ 'flex-row': !isPortable, 'flex-col': isPortable }">
+
+    <div class="flex-row picture-container">
+      <mat-icon class="arrow left" (click)="changePhoto('previous')">keyboard_arrow_left</mat-icon>
+      <img class="picture flex-col" [src]="photo.photo">
+      <mat-icon class="arrow right" (click)="changePhoto('next')">keyboard_arrow_right</mat-icon>
+    </div>
+
+    <div class="text flex-col">
+      <div class="title">Qui sommes-nous ?</div>
+      <div *ngIf="isPortable" class="content">
+        Artisan plombier chauffagiste depuis 2006, mais réellement dans la plomberie et le chauffage <span>depuis 40 ans</span>, nous sommes soucieux de l'excellence et de remettre sans arrêt nos compétences au niveau de vos besoins.
+        Nous comptons pouvoir vous apporter le savoir faire qui a fidélisé une clientèle Normande de <span>plus de 600 clients.</span>
+        Notre seul objectif est de vous satisfaire, votre bien-être est notre priorité !
+      </div>
+      <div *ngIf="!isPortable" class="content">
+        Artisan plombier chauffagiste depuis 2006, mais réellement dans la plomberie et le chauffage <span>depuis 40 ans déjà</span> ! Les aléas de la vie ont permis que je saute le pas de la grande aventure de l'artisanat il y a en effet 14 ans. 14 ans à vous servir, à vous offrir le meilleur de moi-même, toujours soucieux de l'excellence, <span>de remettre sans arrêt mes compétences au niveau de vos besoins.</span>
+      </div>
+      <div *ngIf="!isPortable" class="content">
+        Nous avons décidé, mon épouse et moi de passer les prochaines années dans ce magnifique département qu'est la Dordogne. Installés à Cubjac Auvezère Val d'Ans, nous comptons pouvoir vous apporter le savoir faire qui a fidélisé une clientèle Normande de <span>plus de 600 clients.</span>
+        Notre seul objectif est de vous satisfaire, votre bien-être est notre priorité !
+      </div>
+  </div>
+</div>

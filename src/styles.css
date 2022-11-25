@@ -1,0 +1,40 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.css";
+
+
+
+@font-face {
+  font-family: "BrittanySignature";
+  src: local("BrittanySignature"), url(./assets/fonts/BrittanySignature.ttf) format("truetype");
+}
+@font-face {
+  font-family: "Helvetica";
+  src: local("Helvetica"), url(./assets/fonts/Helvetica.ttf) format("truetype");
+}
+@font-face {
+  font-family: "Handwriting";
+  src: local("Handwriting"), url(./assets/fonts/Handwriting.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: local("Roboto"), url(./assets/fonts/Roboto-Black.ttf) format("truetype");
+}
+
+* {
+
+}
+
+.flex-col {
+  display:flex;
+  flex-direction:column;
+  align-items: center;
+  justify-content: center;
+}
+
+.flex-row {
+  display:flex;
+  flex-direction:row;
+  align-items: center;
+  justify-content: center;
+}

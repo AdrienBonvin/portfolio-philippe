@@ -1,0 +1,62 @@
+{
+  "name": "entreprise-dubuisson",
+  "version": "0.0.0",
+  "scripts": {
+    "ng": "ng",
+    "start": "node serveur.js",
+    "build": "ng build",
+    "watch": "ng build --watch --configuration development",
+    "test": "ng test",
+    "firebase-deploy": "firebase deploy --only hosting"
+  },
+  "private": true,
+  "dependencies": {
+    "@angular/animations": "~13.3.5",
+    "@angular/cdk": "^13.3.5",
+    "@angular/cli": "~13.3.4",
+    "@angular/common": "~13.3.5",
+    "@angular/compiler": "~13.3.5",
+    "@angular/core": "~13.3.5",
+    "@angular/forms": "~13.3.5",
+    "@angular/material": "^13.3.5",
+    "@angular/platform-browser": "~13.3.5",
+    "@angular/platform-browser-dynamic": "~13.3.5",
+    "@angular/router": "~13.3.5",
+    "@material/form-field": "^14.0.0",
+    "@ng-bootstrap/ng-bootstrap": "^12.1.1",
+    "@types/gsap": "^3.0.0",
+    "aos": "^2.3.4",
+    "bootstrap": "^5.1.3",
+    "bootstrap-icons": "^1.8.1",
+    "cli-ux": "^6.0.9",
+    "express": "^4.18.1",
+    "gsap": "^3.10.4",
+    "jquery": "^3.6.0",
+    "path": "^0.12.7",
+    "rxjs": "~7.5.5",
+    "scrollmagic": "^2.0.8",
+    "scrollwizardry": "^0.2.1",
+    "tslib": "^2.4.0",
+    "typescript": "~4.6.4",
+    "zone.js": "~0.11.5"
+  },
+  "devDependencies": {
+    "@angular-devkit/build-angular": "~13.3.4",
+    "@angular/cli": "~13.3.4",
+    "@angular/compiler-cli": "~13.3.5",
+    "@types/aos": "^3.0.4",
+    "@types/jasmine": "~4.0.3",
+    "@types/node": "^17.0.31",
+    "jasmine-core": "^4.1.0",
+    "karma": "~6.3.19",
+    "karma-chrome-launcher": "~3.1.1",
+    "karma-coverage": "~2.2.0",
+    "karma-jasmine": "~5.0.0",
+    "karma-jasmine-html-reporter": "^1.7.0",
+    "typescript": "~4.6.4"
+  },
+  "engines": {
+    "node": "14.16.0",
+    "npm": "8.3.0"
+  }
+}

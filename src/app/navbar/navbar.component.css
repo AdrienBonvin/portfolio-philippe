@@ -1,0 +1,126 @@
+.navbar {
+ height: 60px;
+ width: 100vw;
+ transition: 0.5s ease-in-out;
+ background-color: #3f3f3f25;
+
+}
+
+.phone-container {
+  width:200px;
+}
+
+.btn-reservation {
+  border-color: #1e60aa;
+  margin-left :3%;
+}
+
+.btn-transparent {
+  color: #ffffff;
+  font-weight: bold;
+  background-color: #1e5faab7;
+
+}
+.btn-transparent:hover {
+  color: #ffffff;
+  background-color: #00499c;
+}
+
+.btn-bleu {
+  color: #ffffff;
+  font-weight: bold;
+  background-color: #1e60aa;
+}
+.btn-bleu:hover {
+  color: #1e60aa;
+  background-color: #ffffff;
+}
+
+.phone-white.phone-icon {
+  color:white;
+  margin-left:4%;
+  margin-right:3.5%;
+}
+
+.phone-white.phone-number{
+  color:white;
+  font-style: normal;
+  font-weight: bolder;
+}
+.phone-blue.phone-icon {
+  color: #1e60aa;
+  margin-left:4%;
+  margin-right:3.5%;
+}
+
+.phone-blue.phone-number{
+  color: #1e60aa;
+  font-style: normal;
+  font-weight: bolder;
+}
+
+  .nav-link {
+    cursor: pointer;
+  }
+
+  .navbar div div ul li a {
+    font-weight: 500;
+  }
+
+  /* Modification de la couleur du menu hamburger en vue telephone */
+
+  @media screen and (max-width: 500px) {
+
+  .menu-hamburger-sombre .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgb(13, 65, 124)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+  }
+
+  .menu-hamburger-sombre.navbar-toggler {
+    border-color: rgb(13, 65, 124);
+  }
+
+  .menu-hamburger-light .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgb(255, 255, 255)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+  }
+
+  .menu-hamburger-light.navbar-toggler {
+    border-color: rgb(255, 255, 255);
+  }
+
+  #navbarSupportedContent {
+    background-color: rgba(248, 249, 250, 0.95);
+    border: solid;
+    border-radius: 2%;
+    border-color: #1e60aa;
+  }
+
+  .navbar-nav {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color:#00499c
+  }
+
+  #navbarSupportedContent a{
+    color: #1e60aa !important;
+    font-size: 22px;;
+  }
+
+  #navbarSupportedContent li{
+    padding:4%;
+    text-align: center;
+  }
+
+  #navbarSupportedContent button{
+    padding:4%;
+    width:90%;
+    margin:5%;
+  }
+
+  .btn-transparent {
+    color: #ffffff;
+    background-color: #1e60aa;
+  }
+
+}

@@ -1,0 +1,21 @@
+div {
+  margin: 1% 0;
+}
+
+.flex-col {
+  justify-content: start;
+  height:25vh;
+}
+
+.picture {
+  height:40px;
+}
+
+.commentaire {
+  width:70vw;
+  text-align: center;
+}
+
+.info {
+font-style:italic;
+}

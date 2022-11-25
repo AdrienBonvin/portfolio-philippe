@@ -1,0 +1,48 @@
+<div class="container-contact flex-col" id="contact" #contact>
+  <form [formGroup]="contactForm" class="form flex-col" (ngSubmit)="openMail()">
+    <hr>
+    <h1>Contactez-nous</h1>
+
+    <div class="form-field-group">
+      <div class="form-field"><input placeholder="Nom" id="first-name" type="text" formControlName="nom"></div>
+      <div class="form-field"><input placeholder="Prénom" id="first-name" type="text" formControlName="prenom"></div>
+    </div>
+
+    <div class="form-field-group">
+      <div class="form-field"><input placeholder="Code Postal" id="first-name" type="text" formControlName="cp"></div>
+      <div class="form-field"><input placeholder="Ville" id="first-name" type="text" formControlName="ville"></div>
+    </div>
+
+    <div class="form-field-group">
+      <div class="form-field email"><input placeholder="E-mail" id="last-name" type="text" formControlName="email"></div>
+      <div class="form-field"><input placeholder="Téléphone" id="first-name" type="text" formControlName="telephone"></div>
+    </div>
+
+    <div class="form-field services sub-title"><label>Votre demande concerne :</label>
+      <ul formArrayName="services">
+        <li *ngFor="let service of serviceArray; index as i">
+          <input type="checkbox" class="checkbox" (change)="serviceArray[i].checked = !serviceArray[i].checked" [value]="service.name">
+          <div [class]="service.color">
+            {{service.name}}
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <div class="form-field comment flex-col">
+      <label class="sub-title">Détails de votre demande :</label><textarea id="last-name" type="text" formControlName="commentaire"></textarea>
+      <button class="btn btn-submit" type="submit" [disabled]="!contactForm.valid">Envoyer un message</button>
+    </div>
+
+    <img class="devis-gratuit" src="../../../assets/devis-gratuit.png">
+
+
+  </form>
+
+  <div class="popup-container" #featurePopup>
+    <h2 class="sub-title">Demande envoyée</h2>
+    <div><b>Votre message à été transmis avec succès.</b></div>
+    <div>Vous devriez recevoir un accusé de réception dans votre boite mail. Si celui-ci n'apparait pas, vérifiez que votre adresse mail est bien orthographiée.</div>
+    <button (click)="close()" class="btn btn-outline-info">Fermer</button>
+  </div>
+</div>
