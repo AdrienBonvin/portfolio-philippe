@@ -68,6 +68,16 @@ app-icon-text-element {
   height: 150px;
 }
 
+.logo-ed-banner {
+  height:100px;
+}
+
+.ed-banner {
+  width:100%;
+  margin-top:15px;
+  justify-content: space-around;
+}
+
 
 @media screen and (max-width: 500px) {
   .services {
@@ -79,7 +89,7 @@ app-icon-text-element {
   .plomberie-title {
     padding-bottom:20px;
   }
-  img {
+  .qualification img {
     height:100px;
     width:100px;
     object-fit:contain;
@@ -94,5 +104,8 @@ app-icon-text-element {
   }
   .sous-section {
     width:80%;
+  }
+  .logo-ed-banner {
+    margin-top:30px;
   }
 }

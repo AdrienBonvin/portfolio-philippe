@@ -1,3 +1,26 @@
+
+
+  <div class=" ed-banner flex-row" *ngIf="!isPortable; else phoneBanner">
+      <img src="../../assets/install-chauffage.jpg" class="logo-ed-banner">
+      <img src="../../assets/chauffage.jpg" class="logo-ed-banner">
+      <img src="../../assets/ramonage.jpg" class="logo-ed-banner">
+      <img src="../../assets/install-sanitaire.jpg" class="logo-ed-banner">
+      <img src="../../assets/sanitaire.jpg" class="logo-ed-banner">
+  </div>
+  <ng-template #phoneBanner class="flex-col">
+    <div class="flex-row">
+      <img src="../../assets/install-sanitaire.jpg" class="logo-ed-banner">
+      <img src="../../assets/install-chauffage.jpg" class="logo-ed-banner">
+    </div>
+    <div class="flex-row">
+      <img src="../../assets/sanitaire.jpg" class="logo-ed-banner">
+      <img src="../../assets/chauffage.jpg" class="logo-ed-banner">
+    </div>
+    <div class="flex-row">
+      <img src="../../assets/ramonage.jpg" class="logo-ed-banner">
+    </div>
+  </ng-template>
+
 <div class="container-texte-services">
   <div id="Services" class="flex-col">
     <h1 class="flex-row title">SERVICES</h1>

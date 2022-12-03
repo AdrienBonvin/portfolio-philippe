@@ -1,3 +1,13 @@
+.entreprise-img {
+  width:50vw;
+  margin-top:20px;
+  margin-bottom:10px
+}
+
+hr {
+width:80vw
+}
+
 footer {
    width: 100%;
    background-color: rgb(181, 62, 62);
@@ -29,6 +39,10 @@ footer {
 .qr-code {
 width:150px;
 margin-top:0%
+}
+
+.qr-code:hover {
+  cursor:pointer;
 }
 
 /* Drop Animation */

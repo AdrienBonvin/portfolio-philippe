@@ -77,45 +77,47 @@ openMail() {
     // Mail Entreprise
    Email.send({
     Host : 'smtp.elasticemail.com',
-    Username : 'adrien.bonvin@gmail.com',
-    Password : '2562297E4CE7A61A87AF7678508EF1FB9EC6',
-    To : 'adrien.bonvin@outlook.fr',
-    From : 'adrien.bonvin@gmail.com',
-    Subject : "Demande d'intervention - "+ nom + ' ' + prenom + ' ' + ville + ' '+ cp ,
+    Username : 'contact.dubuisson.philippe@gmail.com',
+    Password : 'FB7E4A2AA736968E18BF27C62A7E1EBEF893',
+    To : 'dubuisson.ph@orange.fr',
+    From : 'contact.dubuisson.philippe@gmail.com',
+    Subject : "Demande d'intervention - "+ nom + ' ' + prenom + ' ' + ville + ' ' + cp ,
     Body : `
       <b>Nom : </b> ${nom} ${prenom} <br />
       <b>Ville : </b> ${ville} ${cp} <br />
       <b>Email : </b> ${email} <br />
       <b>Tel : </b> ${telephone} <br />
       <b>Services requis : </b> ${services} <br /> <br />
-      ${commentaire}`
+      ${commentaire}
+      <br/><br/><br/>.`
     }).then( (message: string) => {
-        console.log("Mail demande envoyé avec succès")
+        console.log("Mail demande envoyé avec succès : " + message)
      } );
 
      //Mail Client
      Email.send({
       Host : 'smtp.elasticemail.com',
-      Username : 'adrien.bonvin@gmail.com',
-      Password : '2562297E4CE7A61A87AF7678508EF1FB9EC6',
+      Username : 'contact.dubuisson.philippe@gmail.com',
+      Password : 'FB7E4A2AA736968E18BF27C62A7E1EBEF893',
       To : email,
-      From : 'adrien.bonvin@gmail.com',
+      From : 'contact.dubuisson.philippe@gmail.com',
       Subject : "Accusé de réception pour votre demande d'intervention - Entreprise Dubuisson" ,
       Body : `
-        Bonjour ${nom} ${prenom} <br/><br/>
+        Bonjour ${nom} ${prenom}, <br/><br/>
         Nous avons bien reçu votre demande, et allons tenter d'y répondre dans les plus brefs délais.<br /><br/><br/>
         Cordialement,<br/>
         Entreprise Dubuisson
-        <br/><br><br>
-        Une demande spécifique ? <a href='http://localhost:4200/'>Visitez notre site web</a>
-        Vous souhaitez savoir à quoi ressemblent notre travail ? <a href='http://localhost:4200/'>Visitez notre Instagram</a>
+        <br/><br>PS : Cet email est automatique, il est donc inutile d'y répondre. Pour toutes questions, contactez-nous depuis notre site, ou directement sur notre adresse mail : dubuisson.ph@orange.fr<br><br>
+        Une demande spécifique ? <a href='https://entreprise-dubuisson.web.app/'>Visitez notre site web</a>
+        <br/>Vous souhaitez savoir à quoi ressemble notre travail ? <a href='https://www.instagram.com/philippe.dubuisson_/'>Visitez notre Instagram</a>
 
         <br/><br/><br/>
         Demande envoyée : <br/>
         <b>Services requis : </b> ${services} <br /> <br />
-        ${commentaire}`,
+        ${commentaire}
+        <br/><br/><br/>.`,
       }).then( (message: string) => {
-          console.log("Mail client envoyé avec succès")
+          console.log("Mail client envoyé avec succès : " + message)
        } );
   }
 

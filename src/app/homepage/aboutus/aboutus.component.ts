@@ -19,7 +19,7 @@ export class AboutusComponent {
   ngOnInit(): void {
     this.isPortable = window.innerWidth < 700;
     let i: number = 1;
-    while(i <= 8) {
+    while(i <= 10) {
       this.listePhotos.push({
         id: i,
         photo: "../../../assets/about/photo"+i+".jpg"
@@ -30,9 +30,7 @@ export class AboutusComponent {
   }
 
   public changePhoto(direction: string) {
-    console.log('On entre dans la méthode par: ')
     if (direction === 'previous' && this.photo.id > 1) {
-      console.log('un, et on prends : ' + (this.photo.id -2))
       this.photo = this.listePhotos[this.photo.id -2];
     } else if (direction === 'previous') {
       this.photo = this.listePhotos[this.listePhotos.length-1];
